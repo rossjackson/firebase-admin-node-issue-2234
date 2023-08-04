@@ -1,5 +1,8 @@
-import sampleFunc from 'sample';
+import http from 'http'
+import app from './src/app'
 
-console.log('entry point');
+const server = http.createServer(app)
 
-sampleFunc();
+server.listen(8080, () => {
+    console.log(`Server running on port 8080`)
+})
